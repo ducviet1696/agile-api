@@ -11,11 +11,13 @@ module.exports = {
         'services/http/HttpServiceProvider',
         'services/logger/LoggerServiceProvider',
         'services/validation/AjvServiceProvider',
+        'services/database/DatabaseServiceProvider',
 
         'apiV1/ApiV1ServiceProvider',
     ],
     roles    : {},
     logger   : require('./logger'),
+    database : require('./database'),
     validate : {
         schemas: {},
     },
