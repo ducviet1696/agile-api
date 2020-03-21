@@ -45,3 +45,14 @@ export class BadRequest extends Message {
         return 400;
     }
 }
+
+export class UnAuthorized extends Message {
+
+    get code() {
+        return "KIROKU_FORBIDDEN";
+    }
+
+    get status() {
+        return 401;
+    }
+}

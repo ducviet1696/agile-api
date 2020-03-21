@@ -21,4 +21,9 @@ module.exports = {
     validate : {
         schemas: {},
     },
+    jwt      : {
+        privateKey: process.env.AUTH_PRIVATE_KEY || '3fA5WPyDZ051',
+        options   : { expiresIn: process.env.AUTH_EXPIRED_DATE || 36000 },
+        salt      : 10,
+    },
 };
