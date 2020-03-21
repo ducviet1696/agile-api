@@ -1,6 +1,6 @@
 {
   "name": "agile-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API for agile app",
   "main": "server.js",
   "private": true,
