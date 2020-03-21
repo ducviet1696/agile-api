@@ -9,8 +9,10 @@ module.exports = {
     },
     providers: [
         'services/http/HttpServiceProvider',
+        'services/logger/LoggerServiceProvider',
 
         'apiV1/ApiV1ServiceProvider',
     ],
     roles    : {},
+    logger   : require('./logger'),
 };
