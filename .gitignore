@@ -105,3 +105,6 @@ dist
 
 # Project specific settings files
 .idea/
+
+# Build folder
+build/
