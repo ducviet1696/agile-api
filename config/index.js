@@ -14,6 +14,8 @@ module.exports = {
         'services/database/DatabaseServiceProvider',
 
         'apiV1/ApiV1ServiceProvider',
+        'agile/AgileServiceProvider',
+        'agile/auth/AuthServiceProvider',
     ],
     roles    : {},
     logger   : require('./logger'),
