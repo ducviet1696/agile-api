@@ -8,7 +8,8 @@
     "start": "NODE_ENV=production node server.js",
     "dev": "NODE_ENV=develop node server.js",
     "babel": "babel",
-    "build": "babel src --out-dir build"
+    "build": "babel src --out-dir build",
+    "test": "mocha --timeout 10000"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,10 @@
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.0",
     "@babel/register": "^7.9.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "dotenv": "^8.2.0",
+    "mocha": "^7.1.1",
     "youch": "^2.0.10"
   }
 }
