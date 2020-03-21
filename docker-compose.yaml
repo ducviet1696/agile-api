@@ -1,0 +1,12 @@
+version: "3"
+services:
+  database:
+    image: "mysql"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    ports:
+      - 3306:3306
