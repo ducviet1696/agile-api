@@ -1,8 +1,8 @@
-import { Success } from '../services/http/message';
+import { action } from '../action';
+
+import AuthController from './controllers/auth/AuthController';
 
 export default (router) => {
 
-    router.get('/', (context) => {
-        context.body = new Success({ message: 'hello!' });
-    });
+    router.post('/login', action(AuthController, 'login'));
 }
