@@ -10,13 +10,20 @@ module.exports = config => {
     }
 
     config.providers.map(providerPath => {
+
+        // Initialize service providers
         const Provider = require(servicePrefix + '/' + providerPath).default;
         const provider = new Provider();
 
+        // Calling register
         provider.register();
+
         return provider;
     }).forEach(provider => {
+
+        // Booting the services
         provider.boot();
     });
+
     return container;
 };
