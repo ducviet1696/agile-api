@@ -22,6 +22,7 @@
   "homepage": "https://github.com/ducviet1696/agile-api#readme",
   "dependencies": {
     "@fusion.io/container": "^3.1.7",
+    "@fusion.io/utils": "^3.1.7",
     "@koa/cors": "^3.0.0",
     "chalk": "^3.0.0",
     "koa": "^2.11.0",
