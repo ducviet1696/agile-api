@@ -1,10 +1,11 @@
 import ServiceProvider from '../ultils/ServiceProvider';
 import { container }   from '@fusion.io/container';
 
-import Koa     from 'koa';
-import Router  from 'koa-router';
-import cors    from '@koa/cors';
-import koaBody from 'koa-body';
+import Koa         from 'koa';
+import Router      from 'koa-router';
+import cors        from '@koa/cors';
+import koaBody     from 'koa-body';
+import HandleError from './HandleError';
 
 export default class HttpServiceProvider extends ServiceProvider {
 
@@ -22,6 +23,7 @@ export default class HttpServiceProvider extends ServiceProvider {
             multipart: true,
         }));
         koa.use(cors());
+        koa.use(HandleError);
         koa.use(router.allowedMethods());
         koa.use(router.routes());
     }
