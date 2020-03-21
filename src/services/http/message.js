@@ -34,3 +34,14 @@ export class Message {
 export class Success extends Message {
 
 }
+
+export class BadRequest extends Message {
+
+    get code() {
+        return 'AGILE_BAD_REQUEST';
+    }
+
+    get status() {
+        return 400;
+    }
+}
