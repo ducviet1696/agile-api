@@ -1,5 +1,5 @@
 exports.up = function (knex) {
-    return knex.schema.createTable('credential', function (table) {
+    return knex.schema.createTable('credentials', function (table) {
         table.increments('id');
         table.string('username');
         table.string('password');
@@ -11,5 +11,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-    return knex.schema.dropTable('credential');
+    return knex.schema.dropTable('credentials');
 };
