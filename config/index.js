@@ -3,6 +3,6 @@ module.exports = {
     port     : process.env.PORT || 8080,
     debug    : process.env.NODE_ENV !== 'production',
     providers: [
-        'http/HttpServiceProvider',
+        'services/http/HttpServiceProvider.js',
     ],
 };

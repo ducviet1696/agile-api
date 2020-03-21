@@ -6,10 +6,6 @@ const chalk     = require('chalk');
 
 const container = bootstrap(config);
 const kernel    = container.make('http');
-const router    = container.make('router');
-
-kernel.use(router.routes());
-kernel.use(router.allowedMethods());
 
 console.log(chalk`🌏 {gray Server environment {cyan ${config.env}}}`);
 console.log(chalk`🔭 {gray Debugging mode is {cyan ${config.debug}}}`);
