@@ -1,8 +1,8 @@
-export default router => {
+import { Success } from '../services/http/message';
+
+export default (router) => {
 
     router.get('/', (context) => {
-        return context.body = {
-            message: 'hello',
-        };
+        context.body = new Success({ message: 'hello!' });
     });
 }

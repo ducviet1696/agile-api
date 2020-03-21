@@ -7,6 +7,6 @@ export default class ApiV1ServiceProvider extends ServiceProvider {
 
     boot() {
         const router = container.make('router');
-        APIRouter(router)
+        APIRouter(router);
     }
 }
