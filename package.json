@@ -1,0 +1,35 @@
+{
+  "name": "agile-api",
+  "version": "1.0.0",
+  "description": "API for agile app",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production node server.js",
+    "dev": "NODE_ENV=develop node server.js",
+    "babel": "babel",
+    "build": "babel src --out-dir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ducviet1696/agile-api.git"
+  },
+  "author": "vietpd@sphinx-software.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ducviet1696/agile-api/issues"
+  },
+  "homepage": "https://github.com/ducviet1696/agile-api#readme",
+  "dependencies": {
+    "@fusion.io/container": "^3.1.7",
+    "koa": "^2.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "dotenv": "^8.2.0"
+  }
+}
