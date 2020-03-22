@@ -22,10 +22,10 @@ export default class AuthController extends Controller {
         try {
             credential = await this.authenticator.byPassword(context.request.body.username, context.request.body.password);
         } catch (e) {
-            return context.status = new UnAuthorized({});
+            return context.body = new UnAuthorized(e.message);
         }
 
-        context.body = new Success({
+        return context.body = new Success({
             token: jsonwebtoken.sign(credential.toJSON(), jwt.privateKey, jwt.options),
         });
     }
