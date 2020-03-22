@@ -19,7 +19,10 @@ describe('auth', () => {
                 .post('/v1/login')
                 .send(account)
                 .end((err, res) => {
-                    console.log(res.body);
+                    res.should.have.status(200);
+                    res.body.should.be.a('object');
+                    res.body.should.have.property('code').eql('AGILE_SUCCESS');
+                    res.body.should.have.property('token').be.a('string');
                     done();
                 });
         });
@@ -33,7 +36,10 @@ describe('auth', () => {
                 .post('/v1/login')
                 .send(account)
                 .end((err, res) => {
-                    console.log(res.body);
+                    res.should.have.status(401);
+                    res.body.should.be.a('object');
+                    res.body.should.have.property('code').eql('AGILE_UNAUTH_INCORRECT_PASSWORD');
+                    res.body.should.have.property('message').eql('Password mismatch');
                     done();
                 });
         });
